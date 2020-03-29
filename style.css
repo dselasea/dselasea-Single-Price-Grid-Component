@@ -1,0 +1,119 @@
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Karal, sans-serif;
+    background: var(--light-gray);
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* grid */
+
+.grid {
+    display: grid;
+    grid-template-areas: 'join join'
+                        'monthly why';
+                        width: 600px;
+                        margin: 100px auto;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        box-shadow: 2px 2px 2px 2px var(--grayish-blue);
+}
+
+.grid .join {
+    grid-area: join;
+    padding: 35px;
+    background: white;
+    line-height: 1.8rem;
+    color: var(--grayish-blue);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.grid .join h2 {
+    color: var(--cyan);
+}
+
+.grid .join h4 {
+    color: var(--bright-yellow);
+}
+
+.grid .monthly {
+    grid-area: monthly;
+    padding: 35px;
+    line-height: 1.5rem;
+    background:var(--cyan);
+    color: #fff;
+    line-height: 2rem;
+}
+
+.grid .monthly span{
+    font-size: 20px;
+}
+
+.grid .monthly button {
+    color: var(--light-gray);
+    padding: 15px 100px;
+    background: var(--bright-yellow);
+    border: none;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+}
+
+.grid .why {
+    grid-area: why;
+    padding: 35px;
+    line-height: 1.5rem;
+    color: white;
+    background:  hsl(179, 53%, 53%);
+    line-height: 1.4rem;
+}
+
+/* end of grid */
+
+/* media-query */
+
+@media (max-width: 414px) {
+    .grid {
+        display: flex;
+        width: 320px;
+        flex-direction: column;
+    }
+}
+
+/* end of media query */
+
+/* attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/* end of attribution */
